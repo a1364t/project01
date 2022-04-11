@@ -32,5 +32,8 @@ class RentsController < ApplicationController
     redirect_to rents_path
   end
 
-  #private
+  private
+  def rent_params
+    params.require(:rent).permit(:address, :price, :room, :bath, :property, :available, :image, :user_id, :sell_id)
+  end
 end

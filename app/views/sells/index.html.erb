@@ -1,12 +1,15 @@
 <h1> All sells</h1>
+<%= button_to "Add a new property for sell", new_sell_path %>
 
 <% @sells.each do |sell| %>
     <!-- Image tag here -->
     
     <ul>
-        <li>Address:<%=  sell.address %></li>
+        <li>Address:<%= link_to sell.address, sell %></li>
         <li>Price: $<%=  sell.price %></li>
 
     </ul>
 
 <% end %>
+
+<%= button_to "Add a new property for sell", new_sell_path %>

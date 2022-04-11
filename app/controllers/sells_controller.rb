@@ -18,7 +18,7 @@ class SellsController < ApplicationController
 
   def update
     sell = Sell.find params[:id]
-    sell.update sell params
+    sell.update sell_params
     redirect_to sell
   end
 
@@ -32,5 +32,9 @@ class SellsController < ApplicationController
     redirect_to sells_path
   end
 
-  #private
+  private
+  def rent_params
+    params.require(:sell).permit(:address, :price, :room, :bath, :property, :available, :image, :user_id, :rent_id)
+  end
+
 end
