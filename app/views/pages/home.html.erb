@@ -5,4 +5,24 @@
 <h2>
     Welcome <%= @current_user.name %> <%= @current_user.family %>
 </h2>
+    <% if @current_user.rents.present?%>
+        Here is the list of property you posted for rent: 
+            <%  @current_user.rents.each do |rent| %>
+                <li><%= link_to rent.address, rent %></li>
+            <% end %>
+        
+    <% end %>
+
+    <% if @current_user.sells.present?%>
+        Here is the list of property you posted for sell: 
+            <%  @current_user.sells.each do |sell| %>
+                <li><%= link_to sell.address, sell %></li>
+            <% end %>
+    <% end %>
+
+<% else %>
+
+<p>This page is for searching your home</p>
+
 <% end %>
+

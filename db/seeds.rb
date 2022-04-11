@@ -1,7 +1,7 @@
 User.destroy_all
 
 u1 = User.create :email => 'ab@ga.co', :name => 'Abbas', :family => 'Yue', :password => 'chicken'
-u2 = User.create :email => 'alireza@ga.co', :name => 'Alireza', :family => 'Talaei', :password => 'chicken'
+u2 = User.create :email => 'alireza@ga.co', :name => 'Alireza', :family => 'Talaei', :password => 'chicken', :admin => true
 u3 = User.create :email => 'smith@ga.co', :name => 'John', :family => 'Smith', :password => 'chicken'
 u4 = User.create :email => 'Gordon@ga.co', :name => 'Gordon', :family => 'wallace', :password => 'chicken'
 u5 = User.create :email => 'sara@ga.co', :name => 'Steve', :family => 'Innis', :password => 'chicken'
@@ -10,22 +10,22 @@ u6 = User.create :email => 'mama@ga.co', :name => 'Peter', :family => 'Smith', :
 puts "#{User.count} created"
 
 Sell.destroy_all
-s1 = Sell.create :address => 'Meadobank', :price => 100, :room => 2, :bath => 1, :property => 'Appartment' 
-s2 = Sell.create :address => 'Wollongong', :price => 150, :room => 2, :bath => 1
-s3 = Sell.create :address => 'Ryde', :price => 400, :room => 1, :bath => 1
-s4 = Sell.create :address => 'Kensington', :price => 700, :room => 5, :bath => 3
-s5 = Sell.create :address => 'Bluemountain', :price => 600, :room => 3, :bath => 2
-s6 = Sell.create :address => 'Paramatta', :price => 500, :room => 2, :bath => 2
+s1 = Sell.create :address => 'Meadobank', :price => 800000, :room => 2, :bath => 1, :property => 'Appartment' 
+s2 = Sell.create :address => 'Wollongong', :price => 1900000, :room => 2, :bath => 1
+s3 = Sell.create :address => 'Ryde', :price => 1750000, :room => 1, :bath => 1
+s4 = Sell.create :address => 'Kensington', :price => 1800000, :room => 5, :bath => 3
+s5 = Sell.create :address => 'Bluemountain', :price => 2000000, :room => 3, :bath => 2
+s6 = Sell.create :address => 'Paramatta', :price => 700000, :room => 2, :bath => 2
 puts "#{Sell.count} created"
 
 
 Rent.destroy_all
-r1 = Rent.create :address =>'Castle Hills', :price => 800000, :room => 2, :bath => 2
-r2 = Rent.create :address =>'Gladsville', :price => 1900000, :room => 3, :bath => 2
-r3 = Rent.create :address =>'Chatswood', :price => 1750000, :room => 3, :bath => 2
-r4 = Rent.create :address =>'Lane Cove', :price => 1800000, :room => 3, :bath => 2
-r5 = Rent.create :address =>'North Ryde', :price => 2000000, :room => 5, :bath => 3
-r6 = Rent.create :address =>'Mascot', :price => 700000, :room => 2, :bath => 1
+r1 = Rent.create :address =>'Castle Hills', :price => 500, :room => 2, :bath => 2
+r2 = Rent.create :address =>'Gladsville', :price => 600, :room => 3, :bath => 2
+r3 = Rent.create :address =>'Chatswood', :price => 400, :room => 3, :bath => 2
+r4 = Rent.create :address =>'Lane Cove', :price => 700, :room => 3, :bath => 2
+r5 = Rent.create :address =>'North Ryde', :price => 600, :room => 5, :bath => 3
+r6 = Rent.create :address =>'Mascot', :price => 500, :room => 2, :bath => 1
 
 puts "#{Rent.count} created"
 
@@ -42,5 +42,7 @@ puts "sells and rents"
 
 puts "Users and Rents"
     u1.sells << s1 << s2 << s3
+    u2.sells << s4 << s5 << s6
 puts "Users and Sells"
     u2.rents << r1 << r2 << r3
+

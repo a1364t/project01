@@ -1,4 +1,6 @@
 class SellsController < ApplicationController
+  before_action :check_for_login
+
   def index
     @sells = Sell.all
   end
@@ -33,7 +35,7 @@ class SellsController < ApplicationController
   end
 
   private
-  def rent_params
+  def sell_params
     params.require(:sell).permit(:address, :price, :room, :bath, :property, :available, :image, :user_id, :rent_id)
   end
 

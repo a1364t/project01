@@ -18613,3 +18613,1031 @@ Processing by SellsController#edit as HTML
 Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2022-04-11 17:30:19 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 31ms (Views: 28.3ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/login" for 127.0.0.1 at 2022-04-11 17:30:22 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9hJyWnsskYuRbRkkxKe5WFA5F9V18478oZa1GOwuxKLXNzVrIi9ET9kJIO3OKEyNjyJw0zUCZcAXTNn2TsWY3A=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-04-11 17:30:22 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2022-04-11 17:30:24 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-04-11 17:30:30 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-04-11 17:30:32 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2L9TmMjPA3v1aC85s/rTUdnVt+J/a16Uq6iI2GbYIv/0XWARDVI46O+sL9sDhVLvWtvgWTqb8Bkt6FCH4Ewhww==", "email"=>"ab@ga.co", "password"=>"[FILTERED]", "commit"=>"Sign in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ab@ga.co"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/
+Completed 302 Found in 271ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-11 17:30:33 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/rents" for 127.0.0.1 at 2022-04-11 17:30:35 +1000
+Processing by RentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering rents/index.html.erb within layouts/application
+  [1m[36mRent Load (0.6ms)[0m  [1m[34mSELECT "rents".* FROM "rents"[0m
+  ↳ app/views/rents/index.html.erb:4
+  Rendered rents/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 26ms (Views: 23.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/sells" for 127.0.0.1 at 2022-04-11 17:30:38 +1000
+Processing by SellsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering sells/index.html.erb within layouts/application
+  [1m[36mSell Load (0.3ms)[0m  [1m[34mSELECT "sells".* FROM "sells"[0m
+  ↳ app/views/sells/index.html.erb:4
+  Rendered sells/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rents" for 127.0.0.1 at 2022-04-11 17:30:41 +1000
+Processing by RentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering rents/index.html.erb within layouts/application
+  [1m[36mRent Load (0.3ms)[0m  [1m[34mSELECT "rents".* FROM "rents"[0m
+  ↳ app/views/rents/index.html.erb:4
+  Rendered rents/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rents/11" for 127.0.0.1 at 2022-04-11 17:30:43 +1000
+Processing by RentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mRent Load (0.1ms)[0m  [1m[34mSELECT  "rents".* FROM "rents" WHERE "rents"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/rents_controller.rb:26
+  Rendering rents/show.html.erb within layouts/application
+  Rendered rents/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/rents/11/edit" for 127.0.0.1 at 2022-04-11 17:30:44 +1000
+Processing by RentsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mRent Load (0.1ms)[0m  [1m[34mSELECT  "rents".* FROM "rents" WHERE "rents"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/rents_controller.rb:16
+  Rendering rents/edit.html.erb within layouts/application
+  Rendered rents/_form.html.erb (2.4ms)
+  Rendered rents/edit.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/rents/11" for 127.0.0.1 at 2022-04-11 17:30:51 +1000
+Processing by RentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eeXBn0LBuiebYfLF0sGsm5LtDhOfYz/22MXhOk2MtVpeJzB3oSKmMGyuRTqAZ/KTj2tste8EytBiWSQHIVCYqA==", "rent"=>{"address"=>"North Ryde", "price"=>"2000", "room"=>"4", "bath"=>"3", "property"=>"house", "available"=>"2022-04-30", "image"=>""}, "commit"=>"Update Rent", "id"=>"11"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mRent Load (0.3ms)[0m  [1m[34mSELECT  "rents".* FROM "rents" WHERE "rents"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/rents_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/rents_controller.rb:21
+  [1m[36mRent Update (6.2ms)[0m  [1m[33mUPDATE "rents" SET "room" = $1, "updated_at" = $2 WHERE "rents"."id" = $3[0m  [["room", 4], ["updated_at", "2022-04-11 07:30:51.912777"], ["id", 11]]
+  ↳ app/controllers/rents_controller.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/rents_controller.rb:21
+Redirected to http://localhost:3000/rents/11
+Completed 302 Found in 12ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/rents/11" for 127.0.0.1 at 2022-04-11 17:30:51 +1000
+Processing by RentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mRent Load (0.1ms)[0m  [1m[34mSELECT  "rents".* FROM "rents" WHERE "rents"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/rents_controller.rb:26
+  Rendering rents/show.html.erb within layouts/application
+  Rendered rents/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/rents" for 127.0.0.1 at 2022-04-11 17:31:00 +1000
+Processing by RentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering rents/index.html.erb within layouts/application
+  [1m[36mRent Load (0.3ms)[0m  [1m[34mSELECT "rents".* FROM "rents"[0m
+  ↳ app/views/rents/index.html.erb:4
+  Rendered rents/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/rents/new" for 127.0.0.1 at 2022-04-11 17:31:01 +1000
+  
+ActionController::RoutingError (No route matches [POST] "/rents/new"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/sells" for 127.0.0.1 at 2022-04-11 17:31:04 +1000
+Processing by SellsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering sells/index.html.erb within layouts/application
+  [1m[36mSell Load (0.3ms)[0m  [1m[34mSELECT "sells".* FROM "sells"[0m
+  ↳ app/views/sells/index.html.erb:4
+  Rendered sells/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sells/11" for 127.0.0.1 at 2022-04-11 17:31:05 +1000
+Processing by SellsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mSell Load (0.3ms)[0m  [1m[34mSELECT  "sells".* FROM "sells" WHERE "sells"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/sells_controller.rb:26
+  Rendering sells/show.html.erb within layouts/application
+  Rendered sells/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/sells/11/edit" for 127.0.0.1 at 2022-04-11 17:31:06 +1000
+Processing by SellsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mSell Load (0.4ms)[0m  [1m[34mSELECT  "sells".* FROM "sells" WHERE "sells"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/sells_controller.rb:16
+  Rendering sells/edit.html.erb within layouts/application
+  Rendered sells/_form.html.erb (2.0ms)
+  Rendered sells/edit.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 14ms (Views: 10.6ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/sells/11" for 127.0.0.1 at 2022-04-11 17:31:10 +1000
+Processing by SellsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PYQF5QQAhroH+n/QdBxXCrW6cSd8pcKDtuGAEP+mFolrY5zjsZIi0O7rbKcDIcMOjuyB1GxdNq3u5WDMOXCw+Q==", "sell"=>{"address"=>"Bluemountain", "price"=>"600", "room"=>"1", "bath"=>"2", "property"=>"", "available"=>"", "image"=>""}, "commit"=>"Update Sell", "id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mSell Load (0.1ms)[0m  [1m[34mSELECT  "sells".* FROM "sells" WHERE "sells"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/sells_controller.rb:20
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.2ms)
+
+
+  
+NameError (undefined local variable or method `sell_params' for #<SellsController:0x000000012657d128>
+Did you mean?  sell_path):
+  
+app/controllers/sells_controller.rb:21:in `update'
+Started PUT "/__web_console/repl_sessions/643f3713abd0c410fc85c22f30340b50" for 127.0.0.1 at 2022-04-11 17:38:15 +1000
+Started PUT "/__web_console/repl_sessions/643f3713abd0c410fc85c22f30340b50" for 127.0.0.1 at 2022-04-11 17:38:16 +1000
+Started PATCH "/sells/11" for 127.0.0.1 at 2022-04-11 17:39:03 +1000
+Processing by SellsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PYQF5QQAhroH+n/QdBxXCrW6cSd8pcKDtuGAEP+mFolrY5zjsZIi0O7rbKcDIcMOjuyB1GxdNq3u5WDMOXCw+Q==", "sell"=>{"address"=>"Bluemountain", "price"=>"600", "room"=>"1", "bath"=>"2", "property"=>"", "available"=>"", "image"=>""}, "commit"=>"Update Sell", "id"=>"11"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mSell Load (0.3ms)[0m  [1m[34mSELECT  "sells".* FROM "sells" WHERE "sells"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/sells_controller.rb:20
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 15.8ms)
+
+
+  
+NameError (undefined local variable or method `sell_values' for #<SellsController:0x000000013670ad00>
+Did you mean?  sell_url):
+  
+app/controllers/sells_controller.rb:21:in `update'
+Started PATCH "/sells/11" for 127.0.0.1 at 2022-04-11 17:39:12 +1000
+Processing by SellsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PYQF5QQAhroH+n/QdBxXCrW6cSd8pcKDtuGAEP+mFolrY5zjsZIi0O7rbKcDIcMOjuyB1GxdNq3u5WDMOXCw+Q==", "sell"=>{"address"=>"Bluemountain", "price"=>"600", "room"=>"1", "bath"=>"2", "property"=>"", "available"=>"2022-04-14", "image"=>""}, "commit"=>"Update Sell", "id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mSell Load (0.1ms)[0m  [1m[34mSELECT  "sells".* FROM "sells" WHERE "sells"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/sells_controller.rb:20
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.3ms)
+
+
+  
+NameError (undefined local variable or method `sell_values' for #<SellsController:0x000000013661d5a0>
+Did you mean?  sell_url):
+  
+app/controllers/sells_controller.rb:21:in `update'
+Started PATCH "/sells/11" for 127.0.0.1 at 2022-04-11 17:41:20 +1000
+Processing by SellsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PYQF5QQAhroH+n/QdBxXCrW6cSd8pcKDtuGAEP+mFolrY5zjsZIi0O7rbKcDIcMOjuyB1GxdNq3u5WDMOXCw+Q==", "sell"=>{"address"=>"Bluemountain", "price"=>"600", "room"=>"1", "bath"=>"2", "property"=>"", "available"=>"2022-04-14", "image"=>""}, "commit"=>"Update Sell", "id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mSell Load (0.2ms)[0m  [1m[34mSELECT  "sells".* FROM "sells" WHERE "sells"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/sells_controller.rb:20
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 9.7ms)
+
+
+  
+NameError (undefined local variable or method `sell_params' for #<SellsController:0x0000000127355e30>
+Did you mean?  sell_path):
+  
+app/controllers/sells_controller.rb:21:in `update'
+Started PATCH "/sells/11" for 127.0.0.1 at 2022-04-11 17:43:27 +1000
+Processing by SellsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PYQF5QQAhroH+n/QdBxXCrW6cSd8pcKDtuGAEP+mFolrY5zjsZIi0O7rbKcDIcMOjuyB1GxdNq3u5WDMOXCw+Q==", "sell"=>{"address"=>"Bluemountain", "price"=>"600", "room"=>"1", "bath"=>"2", "property"=>"", "available"=>"2022-04-14", "image"=>""}, "commit"=>"Update Sell", "id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mSell Load (0.1ms)[0m  [1m[34mSELECT  "sells".* FROM "sells" WHERE "sells"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/sells_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sells_controller.rb:21
+  [1m[36mSell Update (0.3ms)[0m  [1m[33mUPDATE "sells" SET "room" = $1, "property" = $2, "available" = $3, "image" = $4, "updated_at" = $5 WHERE "sells"."id" = $6[0m  [["room", 1], ["property", ""], ["available", "2022-04-14"], ["image", ""], ["updated_at", "2022-04-11 07:43:27.154565"], ["id", 11]]
+  ↳ app/controllers/sells_controller.rb:21
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sells_controller.rb:21
+Redirected to http://localhost:3000/sells/11
+Completed 302 Found in 28ms (ActiveRecord: 9.2ms)
+
+
+Started GET "/sells/11" for 127.0.0.1 at 2022-04-11 17:43:27 +1000
+Processing by SellsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mSell Load (0.2ms)[0m  [1m[34mSELECT  "sells".* FROM "sells" WHERE "sells"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/sells_controller.rb:26
+  Rendering sells/show.html.erb within layouts/application
+  Rendered sells/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sells/11/edit" for 127.0.0.1 at 2022-04-11 17:43:30 +1000
+Processing by SellsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mSell Load (0.2ms)[0m  [1m[34mSELECT  "sells".* FROM "sells" WHERE "sells"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/sells_controller.rb:16
+  Rendering sells/edit.html.erb within layouts/application
+  Rendered sells/_form.html.erb (2.4ms)
+  Rendered sells/edit.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/sells/11" for 127.0.0.1 at 2022-04-11 17:43:39 +1000
+Processing by SellsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PPr8y0wqKyOr84U4jMFP6Vn5STLCIojnMdCDwTT/MjJqHWXN+biPSULilk/7/NvtYq+5wdLafMlp1GMd8imUQg==", "sell"=>{"address"=>"Bluemountain", "price"=>"600", "room"=>"1", "bath"=>"2", "property"=>"appartment", "available"=>"2022-04-14", "image"=>""}, "commit"=>"Update Sell", "id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mSell Load (0.1ms)[0m  [1m[34mSELECT  "sells".* FROM "sells" WHERE "sells"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/sells_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sells_controller.rb:21
+  [1m[36mSell Update (0.2ms)[0m  [1m[33mUPDATE "sells" SET "property" = $1, "updated_at" = $2 WHERE "sells"."id" = $3[0m  [["property", "appartment"], ["updated_at", "2022-04-11 07:43:39.352549"], ["id", 11]]
+  ↳ app/controllers/sells_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sells_controller.rb:21
+Redirected to http://localhost:3000/sells/11
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/sells/11" for 127.0.0.1 at 2022-04-11 17:43:39 +1000
+Processing by SellsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mSell Load (0.1ms)[0m  [1m[34mSELECT  "sells".* FROM "sells" WHERE "sells"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/sells_controller.rb:26
+  Rendering sells/show.html.erb within layouts/application
+  Rendered sells/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/rents" for 127.0.0.1 at 2022-04-11 17:44:57 +1000
+Processing by RentsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering rents/index.html.erb within layouts/application
+  [1m[36mRent Load (1.0ms)[0m  [1m[34mSELECT "rents".* FROM "rents"[0m
+  ↳ app/views/rents/index.html.erb:4
+  Rendered rents/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 44ms (Views: 31.1ms | ActiveRecord: 4.9ms)
+
+
+Started POST "/rents/new" for 127.0.0.1 at 2022-04-11 17:44:58 +1000
+  
+ActionController::RoutingError (No route matches [POST] "/rents/new"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/rents/new" for 127.0.0.1 at 2022-04-11 17:46:34 +1000
+  
+ActionController::RoutingError (No route matches [POST] "/rents/new"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/rents/new" for 127.0.0.1 at 2022-04-11 17:47:04 +1000
+  
+ActionController::RoutingError (No route matches [POST] "/rents/new"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/rents" for 127.0.0.1 at 2022-04-11 17:47:07 +1000
+Processing by RentsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering rents/index.html.erb within layouts/application
+  [1m[36mRent Load (0.4ms)[0m  [1m[34mSELECT "rents".* FROM "rents"[0m
+  ↳ app/views/rents/index.html.erb:4
+  Rendered rents/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/rents" for 127.0.0.1 at 2022-04-11 17:47:07 +1000
+Processing by RentsController#index as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering rents/index.html.erb within layouts/application
+  [1m[36mRent Load (0.3ms)[0m  [1m[34mSELECT "rents".* FROM "rents"[0m
+  ↳ app/views/rents/index.html.erb:4
+  Rendered rents/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 13ms (Views: 8.4ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/rents/new" for 127.0.0.1 at 2022-04-11 17:47:09 +1000
+Processing by RentsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering rents/new.html.erb within layouts/application
+  Rendered rents/_form.html.erb (1.9ms)
+  Rendered rents/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/rents" for 127.0.0.1 at 2022-04-11 17:47:28 +1000
+Processing by RentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UInFaOyZi63aD4oEOlOqN0Czc81BSg8Q/TqF021ARHGD2wxS3HwGl/XGs0nFX2TrQ9qv7QHkagK9jvC+MYQPog==", "rent"=>{"address"=>"sss", "price"=>"121244", "room"=>"333", "bath"=>"44", "property"=>"unit", "available"=>"2022-04-29", "image"=>""}, "commit"=>"Create Rent"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/rents_controller.rb:11
+  [1m[36mRent Create (3.5ms)[0m  [1m[32mINSERT INTO "rents" ("address", "price", "room", "bath", "property", "available", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["address", "sss"], ["price", 121244], ["room", 333], ["bath", 44], ["property", "unit"], ["available", "2022-04-29"], ["image", ""], ["created_at", "2022-04-11 07:47:28.663568"], ["updated_at", "2022-04-11 07:47:28.663568"]]
+  ↳ app/controllers/rents_controller.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/rents_controller.rb:11
+Redirected to http://localhost:3000/rents/13
+Completed 302 Found in 7ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/rents/13" for 127.0.0.1 at 2022-04-11 17:47:28 +1000
+Processing by RentsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mRent Load (0.2ms)[0m  [1m[34mSELECT  "rents".* FROM "rents" WHERE "rents"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/rents_controller.rb:26
+  Rendering rents/show.html.erb within layouts/application
+  Rendered rents/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-11 17:48:04 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rents" for 127.0.0.1 at 2022-04-11 17:48:06 +1000
+Processing by RentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering rents/index.html.erb within layouts/application
+  [1m[36mRent Load (0.3ms)[0m  [1m[34mSELECT "rents".* FROM "rents"[0m
+  ↳ app/views/rents/index.html.erb:4
+  Rendered rents/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-11 17:50:29 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 23ms (Views: 20.0ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/login" for 127.0.0.1 at 2022-04-11 17:50:30 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"h2S6o+vp6EuxOqg9qSb9yAfUYuiuUhG+W+z6h53b7ZKmQf2Ssuo9j/lekfSjqQgd2M8F7u6j+oLtNpZpPzCx7A=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-04-11 17:50:30 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-11 17:50:32 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-11 17:51:49 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 19ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-04-11 17:51:51 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-04-11 17:51:53 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m/w+nGoO8Fn5+Q7qmW3zHVp8fwI3JbvPEzajtawkiOC3Hg0Vr5PLyuM9DggpEnKj2XIouXLVFUKVdnvqKrCL3A==", "email"=>"ab@ga.co", "password"=>"[FILTERED]", "commit"=>"Sign in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ab@ga.co"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/
+Completed 302 Found in 253ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-11 17:51:53 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-11 17:52:33 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-11 17:54:23 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 26ms (Views: 22.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/rents" for 127.0.0.1 at 2022-04-11 17:57:10 +1000
+Processing by RentsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering rents/index.html.erb within layouts/application
+  [1m[36mRent Load (0.3ms)[0m  [1m[34mSELECT "rents".* FROM "rents"[0m
+  ↳ app/views/rents/index.html.erb:4
+  Rendered rents/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 28ms (Views: 16.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/rents/new" for 127.0.0.1 at 2022-04-11 17:57:13 +1000
+Processing by RentsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering rents/new.html.erb within layouts/application
+  Rendered rents/_form.html.erb (5.4ms)
+  Rendered rents/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rents" for 127.0.0.1 at 2022-04-11 17:57:16 +1000
+Processing by RentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering rents/index.html.erb within layouts/application
+  [1m[36mRent Load (1.7ms)[0m  [1m[34mSELECT "rents".* FROM "rents"[0m
+  ↳ app/views/rents/index.html.erb:4
+  Rendered rents/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 13ms (Views: 10.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/rents/8" for 127.0.0.1 at 2022-04-11 17:57:18 +1000
+Processing by RentsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mRent Load (0.3ms)[0m  [1m[34mSELECT  "rents".* FROM "rents" WHERE "rents"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/rents_controller.rb:26
+  Rendering rents/show.html.erb within layouts/application
+  Rendered rents/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-11 17:57:36 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/login" for 127.0.0.1 at 2022-04-11 17:57:38 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"i6BCHbpzGa324hOtSzHUNmTLwSukg5ZhSzyYgEs+eySqhQUs43DMab6GKmRBviHju9CmLeRyfV395vRu6dUnWg=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-04-11 17:57:38 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-04-11 17:57:43 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QCk0iHyYt/lytDeG0B0LePVNIjZQRfhLRGMPIbheSxdhDHO5JZtiPTrQDk/akv6tKlZFMBC0E3fyuWPPGrUXaQ==", "email"=>"ab@ga.co", "password"=>"[FILTERED]", "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ab@ga.co"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/
+Completed 302 Found in 255ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-11 17:57:43 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/rents" for 127.0.0.1 at 2022-04-11 18:02:56 +1000
+Processing by RentsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering rents/index.html.erb within layouts/application
+  [1m[36mRent Load (0.6ms)[0m  [1m[34mSELECT "rents".* FROM "rents"[0m
+  ↳ app/views/rents/index.html.erb:4
+  Rendered rents/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 20ms (Views: 16.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/rents/13" for 127.0.0.1 at 2022-04-11 18:04:48 +1000
+Processing by RentsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mRent Load (0.3ms)[0m  [1m[34mSELECT  "rents".* FROM "rents" WHERE "rents"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/rents_controller.rb:26
+  Rendering rents/show.html.erb within layouts/application
+  Rendered rents/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/rents/13" for 127.0.0.1 at 2022-04-11 18:04:51 +1000
+Processing by RentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"txWuivgrJhaiRF9ThUImjNofVi3AW5xILuVemGW8odOWMOm7oSjz0uogZpqPzdNZBQQxK4Cqd3SYPzJ2x1f9rQ==", "id"=>"13"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mRent Load (0.2ms)[0m  [1m[34mSELECT  "rents".* FROM "rents" WHERE "rents"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/rents_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/rents_controller.rb:31
+  [1m[36mRent::HABTM_Sells Destroy (1.7ms)[0m  [1m[31mDELETE FROM "rents_sells" WHERE "rents_sells"."rent_id" = $1[0m  [["rent_id", 13]]
+  ↳ app/controllers/rents_controller.rb:31
+  [1m[36mRent Destroy (0.4ms)[0m  [1m[31mDELETE FROM "rents" WHERE "rents"."id" = $1[0m  [["id", 13]]
+  ↳ app/controllers/rents_controller.rb:31
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/rents_controller.rb:31
+Redirected to http://localhost:3000/rents
+Completed 302 Found in 9ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/rents" for 127.0.0.1 at 2022-04-11 18:04:51 +1000
+Processing by RentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering rents/index.html.erb within layouts/application
+  [1m[36mRent Load (0.3ms)[0m  [1m[34mSELECT "rents".* FROM "rents"[0m
+  ↳ app/views/rents/index.html.erb:4
+  Rendered rents/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/login" for 127.0.0.1 at 2022-04-11 18:06:37 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"w5grV8FcvBaxdKUQk/TNlQwzClagO4PDLQjVta/DzRrivWxmmF9p0vkQnNmZezhA0yhtUODKaP+b0rlbDSiRZA=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+Redirected to http://localhost:3000/login
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-04-11 18:06:37 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-11 18:07:22 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/alireza/Projects/Project01/realestate/app/views/pages/home.html.erb:9: syntax error, unexpected `else'
+...ze;@output_buffer.append=( else );@output_buffer.safe_append...
+...                           ^~~~
+/Users/alireza/Projects/Project01/realestate/app/views/pages/home.html.erb:13: syntax error, unexpected `end', expecting ')'
+'.freeze; end 
+          ^~~
+/Users/alireza/Projects/Project01/realestate/app/views/pages/home.html.erb:16: syntax error, unexpected `ensure', expecting ')'
+          ensure
+          ^~~~~~
+/Users/alireza/Projects/Project01/realestate/app/views/pages/home.html.erb:18: syntax error, unexpected `end', expecting ')'
+          end
+          ^~~
+):
+  
+app/views/pages/home.html.erb:9: syntax error, unexpected `else'
+app/views/pages/home.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/pages/home.html.erb:16: syntax error, unexpected `ensure', expecting ')'
+app/views/pages/home.html.erb:18: syntax error, unexpected `end', expecting ')'
+Started GET "/" for 127.0.0.1 at 2022-04-11 18:07:32 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-04-11 18:07:35 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-04-11 18:07:36 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qgYHEZWwDaEudar3YWHS0mGonKDf/Cgca+dt+84hY9iG5DSYUC02MjSxqhXRHlNs4qbLG5oMhpHtp7WkSLVg5A==", "email"=>"ab@ga.co", "password"=>"[FILTERED]", "commit"=>"Sign in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ab@ga.co"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/
+Completed 302 Found in 267ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-11 18:07:37 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-11 18:14:16 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rents" for 127.0.0.1 at 2022-04-11 18:14:17 +1000
+Processing by RentsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering rents/index.html.erb within layouts/application
+  [1m[36mRent Load (0.5ms)[0m  [1m[34mSELECT "rents".* FROM "rents"[0m
+  ↳ app/views/rents/index.html.erb:4
+  Rendered rents/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/rents" for 127.0.0.1 at 2022-04-11 18:14:43 +1000
+Processing by RentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering rents/index.html.erb within layouts/application
+  [1m[36mRent Load (0.2ms)[0m  [1m[34mSELECT "rents".* FROM "rents"[0m
+  ↳ app/views/rents/index.html.erb:4
+  Rendered rents/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rents" for 127.0.0.1 at 2022-04-11 18:14:44 +1000
+Processing by RentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering rents/index.html.erb within layouts/application
+  [1m[36mRent Load (0.4ms)[0m  [1m[34mSELECT "rents".* FROM "rents"[0m
+  ↳ app/views/rents/index.html.erb:4
+  Rendered rents/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rents" for 127.0.0.1 at 2022-04-11 18:14:45 +1000
+Processing by RentsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering rents/index.html.erb within layouts/application
+  [1m[36mRent Load (0.2ms)[0m  [1m[34mSELECT "rents".* FROM "rents"[0m
+  ↳ app/views/rents/index.html.erb:4
+  Rendered rents/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sells" for 127.0.0.1 at 2022-04-11 18:14:46 +1000
+Processing by SellsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering sells/index.html.erb within layouts/application
+  [1m[36mSell Load (6.6ms)[0m  [1m[34mSELECT "sells".* FROM "sells"[0m
+  ↳ app/views/sells/index.html.erb:4
+  Rendered sells/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 18ms (Views: 9.8ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/sells" for 127.0.0.1 at 2022-04-11 18:15:12 +1000
+Processing by SellsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering sells/index.html.erb within layouts/application
+  [1m[36mSell Load (0.2ms)[0m  [1m[34mSELECT "sells".* FROM "sells"[0m
+  ↳ app/views/sells/index.html.erb:4
+  Rendered sells/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/sells" for 127.0.0.1 at 2022-04-11 18:15:13 +1000
+Processing by SellsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering sells/index.html.erb within layouts/application
+  [1m[36mSell Load (0.2ms)[0m  [1m[34mSELECT "sells".* FROM "sells"[0m
+  ↳ app/views/sells/index.html.erb:4
+  Rendered sells/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sells" for 127.0.0.1 at 2022-04-11 18:15:13 +1000
+Processing by SellsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering sells/index.html.erb within layouts/application
+  [1m[36mSell Load (0.2ms)[0m  [1m[34mSELECT "sells".* FROM "sells"[0m
+  ↳ app/views/sells/index.html.erb:4
+  Rendered sells/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sells" for 127.0.0.1 at 2022-04-11 18:15:13 +1000
+Processing by SellsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering sells/index.html.erb within layouts/application
+  [1m[36mSell Load (0.2ms)[0m  [1m[34mSELECT "sells".* FROM "sells"[0m
+  ↳ app/views/sells/index.html.erb:4
+  Rendered sells/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sells" for 127.0.0.1 at 2022-04-11 18:17:30 +1000
+Processing by SellsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering sells/index.html.erb within layouts/application
+  [1m[36mSell Load (0.3ms)[0m  [1m[34mSELECT "sells".* FROM "sells"[0m
+  ↳ app/views/sells/index.html.erb:4
+  Rendered sells/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/sells" for 127.0.0.1 at 2022-04-11 18:17:31 +1000
+Processing by SellsController#index as HTML
+  Rendering sells/index.html.erb within layouts/application
+  [1m[36mSell Load (0.4ms)[0m  [1m[34mSELECT "sells".* FROM "sells"[0m
+  ↳ app/views/sells/index.html.erb:4
+  Rendered sells/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sells" for 127.0.0.1 at 2022-04-11 18:17:32 +1000
+Processing by SellsController#index as HTML
+  Rendering sells/index.html.erb within layouts/application
+  [1m[36mSell Load (0.2ms)[0m  [1m[34mSELECT "sells".* FROM "sells"[0m
+  ↳ app/views/sells/index.html.erb:4
+  Rendered sells/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sells" for 127.0.0.1 at 2022-04-11 18:17:32 +1000
+Processing by SellsController#index as HTML
+  Rendering sells/index.html.erb within layouts/application
+  [1m[36mSell Load (0.3ms)[0m  [1m[34mSELECT "sells".* FROM "sells"[0m
+  ↳ app/views/sells/index.html.erb:4
+  Rendered sells/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sells" for 127.0.0.1 at 2022-04-11 18:17:32 +1000
+Processing by SellsController#index as HTML
+  Rendering sells/index.html.erb within layouts/application
+  [1m[36mSell Load (0.3ms)[0m  [1m[34mSELECT "sells".* FROM "sells"[0m
+  ↳ app/views/sells/index.html.erb:4
+  Rendered sells/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sells" for 127.0.0.1 at 2022-04-11 18:17:32 +1000
+Processing by SellsController#index as HTML
+  Rendering sells/index.html.erb within layouts/application
+  [1m[36mSell Load (0.2ms)[0m  [1m[34mSELECT "sells".* FROM "sells"[0m
+  ↳ app/views/sells/index.html.erb:4
+  Rendered sells/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sells" for 127.0.0.1 at 2022-04-11 18:17:32 +1000
+Processing by SellsController#index as HTML
+  Rendering sells/index.html.erb within layouts/application
+  [1m[36mSell Load (0.3ms)[0m  [1m[34mSELECT "sells".* FROM "sells"[0m
+  ↳ app/views/sells/index.html.erb:4
+  Rendered sells/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sells/16" for 127.0.0.1 at 2022-04-11 18:20:51 +1000
+Processing by SellsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mSell Load (0.3ms)[0m  [1m[34mSELECT  "sells".* FROM "sells" WHERE "sells"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/sells_controller.rb:26
+  Rendering sells/show.html.erb within layouts/application
+  Rendered sells/show.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `strftime' for nil:NilClass):
+     8:     <li>Room: <%= @sell.room %></li>
+     9:     <li>Bath:<%= @sell.bath %></li>
+    10:     <li>Type:<%= @sell.property %></li>
+    11:     <li>Avaliable date: <%= @sell.available.strftime '%A, %B %e, %Y' %></li>
+    12: </ul>
+    13: 
+    14: 
+  
+app/views/sells/show.html.erb:11:in `_app_views_sells_show_html_erb__871782444670735167_138980'

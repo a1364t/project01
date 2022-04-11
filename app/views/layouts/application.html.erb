@@ -11,6 +11,9 @@
     <nav>
       <%= link_to "Home", root_path %>
       <% if @current_user.present? %>
+        <% if @current_user.admin? %>
+          <%= link_to "All users", users_path %>
+        <% end %>
         <%= link_to "Sign out #{ @current_user.name }", login_path, :method => 'delete' %>
         <%= link_to "All rents", rents_path %>
         
