@@ -1,0 +1,12 @@
+<h1> All sells</h1>
+
+<% @sells.each do |sell| %>
+    <!-- Image tag here -->
+    
+    <ul>
+        <li>Address:<%=  sell.address %></li>
+        <li>Price: $<%=  sell.price %></li>
+
+    </ul>
+
+<% end %>

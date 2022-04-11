@@ -1,0 +1,11 @@
+<h1>RealEstate</h1>
+
+<h2>
+    Here is the user ID <%= session[:user_id] %>
+</h2>
+
+<% if @current_user.present? %>
+<h2>
+    Welcome <%= @current_user.name %> <%= @current_user.family %>
+</h2>
+<% end %>

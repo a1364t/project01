@@ -1,0 +1,18 @@
+<h1><%= @rent.address %></h1>
+
+<!-- image tag here-->
+
+<ul>
+    <li>Address:<%=  @rent.address %></li>
+    <li>Price: $<%=  @rent.price %></li>
+    <li>Room: <%= @rent.room %></li>
+    <li>Bath:<%= @rent.bath %></li>
+    <li>Type:<%= @rent.type %></li>
+    <li>Avaliable: <%= @rent.available %></li>
+</ul>
+
+
+<div>
+    <%= link_to "Edit property", edit_rent_path(@rent) %>
+    <%= link_to "Delete property", @rent, :method => 'delete', :data => {:confirm => "Are you sure?"} %>
+</div>

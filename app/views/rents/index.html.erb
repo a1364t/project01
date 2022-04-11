@@ -1,0 +1,12 @@
+<h1> All rents</h1>
+
+<% @rents.each do |rent| %>
+    <!-- Image tag here -->
+    
+    <ul>
+        <li>Address:<%= link_to rent.address, rent %></li>
+        <li>Price: $<%=  rent.price %></li>
+
+    </ul>
+
+<% end %>

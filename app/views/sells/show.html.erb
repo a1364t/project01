@@ -1,0 +1,18 @@
+<h1><%= @sell.address %></h1>
+
+<!-- image tag here-->
+
+<ul>
+    <li>Address:<%=  @sell.address %></li>
+    <li>Price: $<%=  @sell.price %></li>
+    <li>Room: <%= @sell.room %></li>
+    <li>Bath:<%= @sell.bath %></li>
+    <li>Type:<%= @sell.type %></li>
+    <li>Avaliable: <%= @sell.available %></li>
+</ul>
+
+
+<div>
+    <%= link_to "Edit property", edit_sell_path(@sell) %>
+    <%= link_to "Delete property", @sell, :method => 'delete', :data => {:confirm => "Are you sure?"} %>
+</div>

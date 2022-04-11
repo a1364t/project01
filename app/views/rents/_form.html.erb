@@ -1,0 +1,25 @@
+<%= form_for @rent do |f| %>
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+
+    <%= f.label :price %>
+    <%= f.number_field :price %>
+
+    <%= f.label :room %>
+    <%= f.number_field :room %>
+
+    <%= f.label :bath %>
+    <%= f.number_field :bath %>
+
+    <%= f.label :property %>
+    <%= f.text_field :property %>
+
+    <%= f.label :available %>
+    <%= f.date_field :available %>
+
+    <%= f.label :image %>
+    <%= f.url_field :image %>
+
+
+    <%= f.submit %>
+<% end%>
