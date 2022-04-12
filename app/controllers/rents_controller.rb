@@ -3,6 +3,7 @@ class RentsController < ApplicationController
   
   def index
     @rents = Rent.all
+    @sells = Sell.all
   end
 
   def new
@@ -10,7 +11,7 @@ class RentsController < ApplicationController
   end
 
   def create
-    rent = Rent.create rent_params
+    rent = @current_user.rents.create rent_params
     redirect_to rent
   end
 
@@ -36,6 +37,6 @@ class RentsController < ApplicationController
 
   private
   def rent_params
-    params.require(:rent).permit(:address, :price, :room, :bath, :property, :available, :image, :user_id, :sell_id)
+    params.require(:rent).permit(:address, :price, :room, :bath, :property, :available, :image, :sell_id)
   end
 end

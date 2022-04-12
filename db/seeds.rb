@@ -10,22 +10,22 @@ u6 = User.create :email => 'mama@ga.co', :name => 'Peter', :family => 'Smith', :
 puts "#{User.count} created"
 
 Sell.destroy_all
-s1 = Sell.create :address => 'Meadobank', :price => 800000, :room => 2, :bath => 1, :property => 'Appartment' 
-s2 = Sell.create :address => 'Wollongong', :price => 1900000, :room => 2, :bath => 1
-s3 = Sell.create :address => 'Ryde', :price => 1750000, :room => 1, :bath => 1
-s4 = Sell.create :address => 'Kensington', :price => 1800000, :room => 5, :bath => 3
-s5 = Sell.create :address => 'Bluemountain', :price => 2000000, :room => 3, :bath => 2
-s6 = Sell.create :address => 'Paramatta', :price => 700000, :room => 2, :bath => 2
+s1 = Sell.create :address => 'Meadobank', :price => 800000, :room => 2, :bath => 1, :property => 'Appartment', :available => '2022-04-30' 
+s2 = Sell.create :address => 'Wollongong', :price => 1900000, :room => 2, :bath => 1, :property => 'House', :available => '2022-04-30' 
+s3 = Sell.create :address => 'Ryde', :price => 1750000, :room => 1, :bath => 1, :property => 'TownHouse', :available => '2022-04-30'
+s4 = Sell.create :address => 'Kensington', :price => 1800000, :room => 5, :bath => 3, :property => 'House', :available => '2022-04-30'
+s5 = Sell.create :address => 'Bluemountain', :price => 2000000, :room => 3, :bath => 2, :property => 'House', :available => '2022-04-30'
+s6 = Sell.create :address => 'Paramatta', :price => 700000, :room => 2, :bath => 2, :property => 'Appartment', :available => '2022-04-30'
 puts "#{Sell.count} created"
 
 
 Rent.destroy_all
-r1 = Rent.create :address =>'Castle Hills', :price => 500, :room => 2, :bath => 2
-r2 = Rent.create :address =>'Gladsville', :price => 600, :room => 3, :bath => 2
-r3 = Rent.create :address =>'Chatswood', :price => 400, :room => 3, :bath => 2
-r4 = Rent.create :address =>'Lane Cove', :price => 700, :room => 3, :bath => 2
-r5 = Rent.create :address =>'North Ryde', :price => 600, :room => 5, :bath => 3
-r6 = Rent.create :address =>'Mascot', :price => 500, :room => 2, :bath => 1
+r1 = Rent.create :address =>'Castle Hills', :price => 500, :room => 2, :bath => 2, :property => 'Appartment', :available => '2022-04-30'
+r2 = Rent.create :address =>'Gladsville', :price => 600, :room => 3, :bath => 2, :property => 'Appartment', :available => '2022-04-30'
+r3 = Rent.create :address =>'Chatswood', :price => 400, :room => 3, :bath => 2, :property => 'House', :available => '2022-04-30'
+r4 = Rent.create :address =>'Lane Cove', :price => 700, :room => 3, :bath => 2, :property => 'Appartment', :available => '2022-04-30'
+r5 = Rent.create :address =>'North Ryde', :price => 600, :room => 5, :bath => 3, :property => 'House', :available => '2022-04-30'
+r6 = Rent.create :address =>'Mascot', :price => 500, :room => 2, :bath => 1, :property => 'Unit', :available => '2022-04-30'
 
 puts "#{Rent.count} created"
 

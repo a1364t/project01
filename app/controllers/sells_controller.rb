@@ -10,7 +10,7 @@ class SellsController < ApplicationController
   end
 
   def create
-    sell = Sell.create sell_params
+    sell = @current_user.sells.create sell_params
     redirect_to sell
   end
 

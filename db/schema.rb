@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2022_04_11_130856) do
     t.text "property"
     t.date "available"
     t.text "image"
+    t.integer "sell_id"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -41,6 +42,7 @@ ActiveRecord::Schema.define(version: 2022_04_11_130856) do
     t.text "property"
     t.date "available"
     t.text "image"
+    t.integer "rent_id"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

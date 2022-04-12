@@ -2,6 +2,7 @@
 
 <% @users.each do |user| %>
     <ul>
-        <li>Full Name: <%= user.name %> <%= user.family %>, Email address: <%= user.email %></li>    
+        <li>Full Name: <%= user.name %> <%= user.family %>, Email address: <%= user.email %></li> 
+        <%= link_to "Delete user", @user, :method => 'delete', :data => {:confirm => "Are you sure?"} %>   
     </ul>
 <% end %>

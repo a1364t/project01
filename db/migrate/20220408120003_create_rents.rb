@@ -8,7 +8,7 @@ class CreateRents < ActiveRecord::Migration[5.2]
       t.text :property
       t.date :available
       t.text :image
-      
+      t.integer :sell_id
       t.integer :user_id
 
       t.timestamps

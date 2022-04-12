@@ -8,7 +8,7 @@ class CreateSells < ActiveRecord::Migration[5.2]
       t.text :property
       t.date :available
       t.text :image
-      
+      t.integer :rent_id
       t.integer :user_id
 
       t.timestamps
