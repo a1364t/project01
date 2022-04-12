@@ -4,6 +4,7 @@ class RentsController < ApplicationController
   def index
     @rents = Rent.all
     @sells = Sell.all
+    
   end
 
   def new

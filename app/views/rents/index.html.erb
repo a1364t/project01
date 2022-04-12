@@ -1,10 +1,11 @@
 <h1> All rents</h1>
-<%= link_to "Click here", new_rent_path %> to add a new property for rent
+<%= link_to "Click Here", new_rent_path %> to add a new property for rent
 
 
 <h4>Search for rent</h4>
     <%= form_tag(rents_path, :method => 'get') do %>
-        <%= number_field_tag(:search, params[:search])  %>
+        <%= number_field_tag(:min, params[:min])  %>
+        <%= number_field_tag(:max, params[:max])  %>
         <%= submit_tag ("search") %>
     <% end  %>
 
@@ -20,7 +21,7 @@
 <% end %>
 
 <% @sells.each do |sell|%>
-    <% if sell.rent_id.present? %>
+    <% unless sell.rent_id.nil? %>
         <%= 'hello' %>
     <% end %>
 <% end %>
