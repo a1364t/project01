@@ -1,0 +1,23 @@
+<h1><%= @agent.title %></h1>
+
+<ul>
+    <li>Contact Name: <%= @agent.name %></li>
+    <li>Contact Phone Number: <%= @agent.phone %></li>
+</ul>
+
+
+<p>Here is the list of posted property for sell</p>
+<% @agent.sells.each do |sell| %>    
+    <li><%= link_to sell.address, sell %></li>
+<% end %>
+
+
+<p>Here is the list of posted property for rent</p>
+<% @agent.rents.each do |rent| %>    
+    <li><%= link_to rent.address, rent %></li>
+<% end %>
+
+<div>
+    <%= link_to 'Edit Agent', edit_agent_path %>
+    <%= link_to "Delete Agent", @agent, :method => 'delete', :data => { :confirm => 'Are you sure?'} %>
+</div>

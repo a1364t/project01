@@ -36,7 +36,7 @@ class SellsController < ApplicationController
 
   private
   def sell_params
-    params.require(:sell).permit(:address, :price, :room, :bath, :property, :available, :image, :user_id, :rent_id)
+    params.require(:sell).permit(:address, :price, :room, :bath, :property, :available, :image, :user_id, :rent_id, :agent_id)
   end
 
 end

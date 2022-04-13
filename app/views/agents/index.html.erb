@@ -1,0 +1,12 @@
+<h1>All Agents</h1>
+
+<% @agents.each do |agent| %>
+
+    <ul>
+        <li>Title: <%= link_to agent.title, agent %></li>
+
+    </ul>
+
+<% end %>
+
+<%= link_to "Click Here", new_agent_path %> to create a new agent

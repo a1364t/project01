@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_11_130856) do
+ActiveRecord::Schema.define(version: 2022_04_13_004847) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "agents", force: :cascade do |t|
+    t.text "title"
+    t.text "name"
+    t.text "phone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "rents", force: :cascade do |t|
     t.text "address"
@@ -23,10 +31,10 @@ ActiveRecord::Schema.define(version: 2022_04_11_130856) do
     t.text "property"
     t.date "available"
     t.text "image"
-    t.integer "sell_id"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "agent_id"
   end
 
   create_table "rents_sells", id: false, force: :cascade do |t|
@@ -42,10 +50,10 @@ ActiveRecord::Schema.define(version: 2022_04_11_130856) do
     t.text "property"
     t.date "available"
     t.text "image"
-    t.integer "rent_id"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "agent_id"
   end
 
   create_table "users", force: :cascade do |t|

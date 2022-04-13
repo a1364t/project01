@@ -29,6 +29,12 @@ r6 = Rent.create :address =>'Mascot', :price => 500, :room => 2, :bath => 1, :pr
 
 puts "#{Rent.count} created"
 
+Agent.destroy_all
+a1 = Agent.create :title => 'MMJ', :name => 'Steve', :phone => '0481953661'
+a2 = Agent.create :title => 'Raywhite', :name => 'Elizabeth', :phone => '0451265541' 
+
+puts "#{Agent.count} created"
+
 puts "rents and sells"
     s1.rents << r1
     s2.rents << r3
@@ -45,4 +51,13 @@ puts "Users and Rents"
     u2.sells << s4 << s5 << s6
 puts "Users and Sells"
     u2.rents << r1 << r2 << r3
+
+puts "rents and agents"
+    a1.rents << r1 << r2 << r3
+    a2.rents << r4 << r5 << r6
+
+puts "sells and agents"
+    a1.sells << s1 << s2 << s3
+    a2.sells << s4 << s4 << s6
+
 

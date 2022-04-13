@@ -1,0 +1,7 @@
+<h1>Search</h1>
+
+<% @rents.each do |rent| %>
+<ul>
+    <li><%= link_to rent.address, rent %></li>
+</ul>    
+<% end%>

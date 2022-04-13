@@ -36,8 +36,13 @@ class RentsController < ApplicationController
     redirect_to rents_path
   end
 
+  def search
+    @rents = Rent.where(["price > #{params[:min].to_i} and price < #{params[:max].to_i}"])
+    
+  end
+
   private
   def rent_params
-    params.require(:rent).permit(:address, :price, :room, :bath, :property, :available, :image, :sell_id)
+    params.require(:rent).permit(:address, :price, :room, :bath, :property, :available, :image, :sell_id, :agent_id)
   end
 end
