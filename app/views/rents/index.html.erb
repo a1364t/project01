@@ -11,9 +11,10 @@
 
     
 <% @rents.each do |rent| %>
-    <!-- Image tag here -->
+    
     
     <ul>
+        <%= cl_image_tag(rent.image, :class => 'index_image') %>
         <li>Address:<%= link_to rent.address, rent %></li>
         <li>Price: $<%=  rent.price %></li>
 

@@ -4,6 +4,7 @@
 <% if @current_user.present? %>
 <h2>
     Welcome <%= @current_user.name %> <%= @current_user.family %>
+    <p>If you have a RealEstate, you can register it <%= link_to 'here', new_agent_path %></p>
 </h2>
     <% if @current_user.rents.present?%>
         Here is the list of property you posted for rent: 
@@ -19,10 +20,6 @@
                 <li><%= link_to sell.address, sell %></li>
             <% end %>
     <% end %>
-
-<% else %>
-
-<p>If you are a new RealEstate, you can register <%= link_to 'here', new_agent_path %></p>
 
 <% end %>
 

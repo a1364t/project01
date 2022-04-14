@@ -1,6 +1,6 @@
 User.destroy_all
 
-u1 = User.create :email => 'ab@ga.co', :name => 'Abbas', :family => 'Yue', :password => 'chicken'
+u1 = User.create :email => 'ab@ga.co', :name => 'Alex', :family => 'Yue', :password => 'chicken'
 u2 = User.create :email => 'alireza@ga.co', :name => 'Alireza', :family => 'Talaei', :password => 'chicken', :admin => true
 u3 = User.create :email => 'smith@ga.co', :name => 'John', :family => 'Smith', :password => 'chicken'
 u4 = User.create :email => 'Gordon@ga.co', :name => 'Gordon', :family => 'wallace', :password => 'chicken'

@@ -3,8 +3,8 @@
 <!-- image tag here-->
 
 <ul>
-    <li>Address:<%=  @sell.address %></li>
-    <li>Price: $<%=  @sell.price %></li>
+    <li>Address: <%=  @sell.address %></li>
+    <li>Price: $<%= number_to_currency @sell.price %></li>
     <li>Room: <%= @sell.room %></li>
     <li>Bath:<%= @sell.bath %></li>
     <li>Type:<%= @sell.property %></li>
@@ -19,11 +19,13 @@
     <% if @sell.created_at.present? %>
         <li>Updated at: <%= @sell.updated_at.strftime '%a, %B %e, %Y, %H:%M %P %Z' %></li>
     <% end %>
-
 </ul>
+<div><%= cl_image_tag(@sell.image, :class => 'show_image' )%></div>
+
 
 
 <div>
     <%= link_to "Edit property", edit_sell_path(@sell) %>
     <%= link_to "Delete property", @sell, :method => 'delete', :data => {:confirm => "Are you sure?"} %>
+    <%= link_to 'Back', sells_path %>
 </div>

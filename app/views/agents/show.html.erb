@@ -2,7 +2,7 @@
 
 <ul>
     <li>Contact Name: <%= @agent.name %></li>
-    <li>Contact Phone Number: <%= @agent.phone %></li>
+    <li>Contact Phone Number: <%= number_to_phone @agent.phone %></li>
 </ul>
 
 
@@ -18,6 +18,8 @@
 <% end %>
 
 <div>
-    <%= link_to 'Edit Agent', edit_agent_path %>
-    <%= link_to "Delete Agent", @agent, :method => 'delete', :data => { :confirm => 'Are you sure?'} %>
+    <% if @current_user.admin %>
+        <%= link_to 'Edit Agent', edit_agent_path %>
+        <%= link_to "Delete Agent", @agent, :method => 'delete', :data => { :confirm => 'Are you sure?'} %>
+    <% end %>
 </div>

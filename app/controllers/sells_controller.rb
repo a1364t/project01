@@ -11,6 +11,12 @@ class SellsController < ApplicationController
 
   def create
     sell = @current_user.sells.create sell_params
+    if params[:file].present?
+      req = Cloudinary::Uploader.upload(params[:file])
+      sell.image = req["public_id"]      
+    end
+    sell.update_attributes(sell_params)
+    sell.save
     redirect_to sell
   end
 
@@ -20,6 +26,12 @@ class SellsController < ApplicationController
 
   def update
     sell = Sell.find params[:id]
+    if params[:file].present?
+      req = Cloudinary::Uploader.upload(params[:file])
+      sell.image = req["public_id"]
+    end
+    sell.update_attributes(sell_params)
+    sell.save
     sell.update sell_params
     redirect_to sell
   end

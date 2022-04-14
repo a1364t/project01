@@ -31,3 +31,5 @@ module Realestate
     config.generators.system_tests = nil
   end
 end
+
+

@@ -3,7 +3,7 @@
     <%= f.text_field :title, :required => true %>
 
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :placeholder => @current_user.name %>
 
     <%= f.label :phone %>
     <%= f.text_field :phone %>

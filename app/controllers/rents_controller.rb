@@ -2,9 +2,7 @@ class RentsController < ApplicationController
   before_action :check_for_login
   
   def index
-    @rents = Rent.all
-    @sells = Sell.all
-    
+    @rents = Rent.all    
   end
 
   def new
@@ -13,6 +11,12 @@ class RentsController < ApplicationController
 
   def create
     rent = @current_user.rents.create rent_params
+    if params[:file].present?
+      req = Cloudinary::Uploader.upload(params[:file])
+      rent.image = req["public_id"]
+    end
+    rent.update_attributes(rent_params)
+    rent.save
     redirect_to rent
   end
 
@@ -22,7 +26,13 @@ class RentsController < ApplicationController
 
   def update
     rent = Rent.find params[:id]
-    rent.update rent_params
+    if params[:file].present?
+      req = Cloudinary::Uploader.upload(params[:file])
+      rent.image = req["public_id"]
+    end
+    rent.update_attributes(rent_params)
+    rent.save
+    rent.update rent_params    
     redirect_to rent
   end
 
