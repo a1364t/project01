@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
   def home
-  end
+    @random1 = Rent.order('RANDOM()').limit(3)
+    @random2 = Sell.order('RANDOM()').limit(3)
+    end
 end

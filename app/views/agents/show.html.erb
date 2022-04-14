@@ -6,16 +6,17 @@
 </ul>
 
 
-<p>Here is the list of posted property for sell</p>
+<p>Here is the list of posted property for sell
 <% @agent.sells.each do |sell| %>    
     <li><%= link_to sell.address, sell %></li>
 <% end %>
+</p>
 
-
-<p>Here is the list of posted property for rent</p>
+<p>Here is the list of posted property for rent
 <% @agent.rents.each do |rent| %>    
     <li><%= link_to rent.address, rent %></li>
 <% end %>
+</p>
 
 <div>
     <% if @current_user.admin %>

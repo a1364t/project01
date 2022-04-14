@@ -9,25 +9,35 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= cloudinary_js_config %>
   </head>
-    <nav>
-      <%= link_to "Home", root_path %>
-      <% if @current_user.present? %>
-        <% if @current_user.admin? %>
-          <%= link_to "All users", users_path %>
-          <%= link_to "list of agents", agents_path %>
-        <% end %>
-        <%= link_to "Sign out #{ @current_user.name }", login_path, :method => 'delete' %>
-        <%= link_to "All rents", rents_path %>
-        
-        <%= link_to "All sells", sells_path %>
-        
-      <% else%>
-        <%= link_to "Sign up", new_user_path %>
-        <%= link_to "Sign in", login_path %>
-      <% end%>   
-    </nav>
-  <body>    
-    <%= yield %>
+  <body>   
+
+    <div class="container">      
+      <nav>
+        <%= link_to "Home", root_path %>
+        <% if @current_user.present? %>
+          <% if @current_user.admin? %>
+            <%= link_to "All users", users_path %>
+            <%= link_to "list of agents", agents_path %>
+          <% end %>
+          <%= link_to "Sign out #{ @current_user.name }", login_path, :method => 'delete' %>
+          <%= link_to "All rents", rents_path %>
+          
+          <%= link_to "All sells", sells_path %>
+          
+        <% else%>
+          <%= link_to "Sign up", new_user_path %>
+          <%= link_to "Sign in", login_path %>
+        <% end%>   
+      </nav>
+
+      <% if flash[:message].present? %>
+        <div class="alert alert-secondary" role="alert">
+           <%= flash[:message] %>
+        </div>
+      <% end %>
+
+      <%= yield %>
+    </div>
 
   </body>
 </html>

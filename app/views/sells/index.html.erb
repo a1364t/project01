@@ -2,22 +2,27 @@
 
 <h4>Search for rent</h4>
     <%= form_tag(sells_search_path, :method => 'get') do %>
-        <%= number_field_tag(:min, params[:min])  %>
-        <%= number_field_tag(:max, params[:max])  %>
-        <%= submit_tag ("search") %>        
+        Min:<%= number_field_tag(:min, params[:min])  %>
+        Max:<%= number_field_tag(:max, params[:max])  %>
+        <%= submit_tag ("search"), :class => "btn btn-outline-secondary" %>        
     <% end  %>
 
 
 <%= link_to "Click here", new_sell_path %> to add a new property for sell
 
 <% @sells.each do |sell| %>
+
+
     
-    
-    <ul>
-        <%= cl_image_tag(sell.image, :class => 'index_image') %>
-        <li>Address:<%= link_to sell.address, sell %></li>
-        <li>Price: $<%= number_to_human sell.price %></li>
-    </ul>
+    <div class="index_image_card">
+        <ul>
+            <%= cl_image_tag(sell.image, :class => 'index_image') %>
+            <li>Address:<%= link_to sell.address, sell %></li>
+            <li>Price: $<%= number_to_human sell.price %></li>
+        </ul>
+    </div>
+
+
 
 <% end %>
 

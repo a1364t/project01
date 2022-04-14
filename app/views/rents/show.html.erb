@@ -7,7 +7,7 @@
     <li>Price: $<%=  @rent.price %></li>
     <li>Room: <%= @rent.room %></li>
     <li>Bath:<%= @rent.bath %></li>
-    <li>Type:<%= @rent.property %></li>
+    <li>Property Type: <%= @rent.property %></li>
     <li>Avaliable date: <%= @rent.available.strftime '%a, %B %e, %Y' %></li>
     <% if @rent.agent.present? %>
         <li>Posted by: <%= link_to @rent.agent.title, @rent.agent %></li>

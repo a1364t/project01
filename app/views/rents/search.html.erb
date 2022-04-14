@@ -1,7 +1,9 @@
 <h2>Search results between $<%= params[:min] %> and $<%= params[:max]%> </h2>
 
-<% @rents.each do |rent| %>
-<ul>
-    <li><%= link_to rent.address, rent %></li>
-</ul>    
-<% end%>
+
+<ol>
+    <% @rents.each do |rent| %>
+        <%= cl_image_tag(rent.image, :class => 'index_image') %>
+        <li><%= link_to rent.address, rent %></li>   
+    <% end%>
+</ol>

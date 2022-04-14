@@ -4,23 +4,29 @@
 
 <h4>Search for rent</h4>
     <%= form_tag(rents_search_path, :method => 'get') do %>
-        <%= number_field_tag(:min, params[:min])  %>
-        <%= number_field_tag(:max, params[:max])  %>
-        <%= submit_tag ("search") %>        
+        Min: <%= number_field_tag(:min, params[:min])  %>
+        Max:<%= number_field_tag(:max, params[:max])  %>
+        <%= submit_tag ("search"), :class => "btn btn-outline-secondary" %>        
     <% end  %>
 
-    
-<% @rents.each do |rent| %>
-    
-    
-    <ul>
-        <%= cl_image_tag(rent.image, :class => 'index_image') %>
-        <li>Address:<%= link_to rent.address, rent %></li>
-        <li>Price: $<%=  rent.price %></li>
 
-    </ul>
 
-<% end %>
+<div class="row">
+    <% @rents.each do |rent| %>
+
+        
+        <div class="index_image_card">
+            <ul>
+                <%= cl_image_tag(rent.image, :class => 'index_image') %>
+                <li>Address:<%= link_to rent.address, rent %></li>
+                <li>Price: $<%=  rent.price %> per week</li>
+            </ul>
+        </div>
+
+    <% end %>
+</div>  
+
+
 
 
 

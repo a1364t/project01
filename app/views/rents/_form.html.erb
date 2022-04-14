@@ -1,29 +1,27 @@
 <%= form_for(@rent, :html => {:multipart => true}) do |f| %>
-    <%= f.label :address %>
-    <%= f.text_field :address %>
+    <%= f.label :address, :class => "input-group-text" %>
+    <%= f.text_field :address, :class => "form-control" %>
 
-    <%= f.label :price %>
-    <%= f.number_field :price %>
+    <%= f.label :price, :class => "input-group-text" %>
+    <%= f.number_field :price, :class => "form-control" %>
 
-    <%= f.label :room %>
-    <%= f.number_field :room %>
+    <%= f.label :room, :class => "input-group-text" %>
+    <%= f.number_field :room, :class => "form-control" %>
 
-    <%= f.label :bath %>
-    <%= f.number_field :bath %>
+    <%= f.label :bath, :class => "input-group-text" %>
+    <%= f.number_field :bath, :class => "form-control" %>
 
-    <%= f.label :property %>
-    <%= f.text_field :property %>
+    <%= f.label :property, 'Property Type', :class => "input-group-text" %>
+    <%= f.text_field :property, :class => "form-control" %>
 
-    <%= f.label :available %>
-    <%= f.date_field :available %>
+    <%= f.label :available, :class => "input-group-text" %>
+    <%= f.date_field :available, :class => "form-control" %>
 
-    <%= f.label :image %>
-    <%= f.cl_image_upload :image %>
-
-    <%= f.label :agent_id %>
+    <%= f.label :image, :class => "input-group-text" %>
+    <%= f.cl_image_upload :image, :class => "form-control" %>
 
     <%= f.label :agent_id %>
     <%= f.select :agent_id, Agent.pluck(:title, :id) %>
 
-    <%= f.submit %>
+    <%= f.submit :class => "btn btn-outline-secondary" %>
 <% end%>

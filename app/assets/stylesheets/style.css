@@ -2,6 +2,13 @@
     max-height: 12em;
 }
 
-.index_image {
-    max-height: 5em;
+.index_image_card {  
+    max-width: 30%;   
+    border: 1px solid grey; 
+    box-shadow: 0px 0px 15px grey ;
 }
+
+.index_image {
+    max-width: 10em;
+}
+

@@ -7,7 +7,7 @@
     <li>Price: $<%= number_to_currency @sell.price %></li>
     <li>Room: <%= @sell.room %></li>
     <li>Bath:<%= @sell.bath %></li>
-    <li>Type:<%= @sell.property %></li>
+    <li>Property Type: <%= @sell.property %></li>
     <li>Avaliable date: <%= @sell.available.strftime '%A, %B %e, %Y' %></li>
     <% if @sell.agent.present? %>
         <li>Posted by: <%= link_to @sell.agent.title, @sell.agent %></li>
