@@ -34,6 +34,10 @@ class SellsController < ApplicationController
     redirect_to sells_path
   end
 
+  def search
+    @sells = Sell.where(["price > #{params[:min].to_i} and price < #{params[:max].to_i}"])    
+  end
+
   private
   def sell_params
     params.require(:sell).permit(:address, :price, :room, :bath, :property, :available, :image, :user_id, :rent_id, :agent_id)

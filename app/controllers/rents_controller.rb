@@ -37,8 +37,7 @@ class RentsController < ApplicationController
   end
 
   def search
-    @rents = Rent.where(["price > #{params[:min].to_i} and price < #{params[:max].to_i}"])
-    
+    @rents = Rent.where(["price > #{params[:min].to_i} and price < #{params[:max].to_i}"])    
   end
 
   private

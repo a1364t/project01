@@ -1,7 +1,7 @@
 <h2>Search results between $<%= params[:min] %> and $<%= params[:max]%> </h2>
 
-<% @rents.each do |rent| %>
+<% @sells.each do |sell| %>
 <ul>
-    <li><%= link_to rent.address, rent %></li>
+    <li><%= link_to sell.address, sell %></li>
 </ul>    
 <% end%>

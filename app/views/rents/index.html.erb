@@ -6,12 +6,10 @@
     <%= form_tag(rents_search_path, :method => 'get') do %>
         <%= number_field_tag(:min, params[:min])  %>
         <%= number_field_tag(:max, params[:max])  %>
-        <%= submit_tag ("search") %>
-        
+        <%= submit_tag ("search") %>        
     <% end  %>
 
-    <p><%= params[:min] %> </p>
-
+    
 <% @rents.each do |rent| %>
     <!-- Image tag here -->
     
