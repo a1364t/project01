@@ -11,7 +11,7 @@ class AgentsController < ApplicationController
 
   def create
     agent = Agent.create agent_params    
-    redirect_to login_path
+    redirect_to root_path
   end
 
   def edit
