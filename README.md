@@ -17,6 +17,7 @@ In future, the following features will be implemented to RealEstate
 
 # Bugs/Issues
 - The Carousel feature on landing page does not work on the deployed version.
+- Responsiveness - lacking responsive UI.
 
 
 Browsing of the website can be done at [RealEstate](https://still-bastion-64813.herokuapp.com/)
