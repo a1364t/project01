@@ -16,7 +16,6 @@ In future, the following features will be implemented to RealEstate
 - A new feature will be added to post a property for both rent and sell.
 
 # Bugs/Issues
-- The Carousel feature on landing page does not work on the deployed version.
 - Responsiveness - lacking responsive UI.
 
 
