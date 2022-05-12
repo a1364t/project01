@@ -12,9 +12,7 @@
 
 
 <div class="row">
-    <% @rents.each do |rent| %>
-
-        
+    <% @rents.each do |rent| %>        
         <div class="index_image_card">
             <ul>
                 <%= cl_image_tag(rent.image, :class => 'index_image') %>
