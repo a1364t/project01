@@ -3,11 +3,13 @@
 
 
 <h4>Search for rent</h4>
+<div class='search'>
     <%= form_tag(rents_search_path, :method => 'get') do %>
         Min: <%= number_field_tag(:min, params[:min])  %>
         Max:<%= number_field_tag(:max, params[:max])  %>
         <%= submit_tag ("search"), :class => "btn btn-outline-secondary" %>        
     <% end  %>
+</div>
 
 
 
@@ -27,5 +29,6 @@
 
 
 
-
+<div class='clickHere'>
 <%= link_to "Click Here", new_rent_path %> to add a new property for rent
+</div>
