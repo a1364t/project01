@@ -1,13 +1,13 @@
 <h1>RealEstate</h1>
 
 <% if @current_user.present? %>
-<h2>
-    Welcome <%= @current_user.name %> <%= @current_user.family %>   
-</h2>
-
 <h3>
-    If you have a RealEstate, you can register it <%= link_to 'here', new_agent_path %>
+    Welcome <%= @current_user.name %> <%= @current_user.family %>   
 </h3>
+
+<h4>
+    If you have a RealEstate, you can register it <%= link_to 'here', new_agent_path %>
+</h4>
     <% if @current_user.rents.present?%>
         Here is the list of property you posted for rent: 
             <ol>
@@ -28,48 +28,79 @@
     <% end %>
 
 <% else %>
-  <div class='slidebar'>
-    <h3>New homes for rent</h3>
+  <div class='main'>
+    <div class='slidebarLeft'>
+      <h4>New homes for rent</h4>
 
-      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <%= cl_image_tag(@random1[0].image, :class => "d-block w-100 home_image")  %>
+              <div class="carousel-caption d-none d-md-block">
+                <h5><%= @random1[0].address %></h5>
+                
+              </div>
+            </div>
+            <div class="carousel-item">
+              <%= cl_image_tag(@random1[1].image, :class => "d-block w-100 home_image")  %> 
+              <div class="carousel-caption d-none d-md-block">
+                <h5><%= @random1[1].address %></h5>
+                
+              </div>
+            </div>
+            <div class="carousel-item">
+            <%= cl_image_tag(@random1[2].image, :class => "d-block w-100 home_image")  %>
+              <div class="carousel-caption d-none d-md-block">
+                <h5><%= @random1[2].address %></h5>
+                
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <%= cl_image_tag(@random1[0].image, :class => "d-block w-100 home_image")  %>
-            <div class="carousel-caption d-none d-md-block">
-              <h5><%= @random1[0].address %></h5>
-              
+    </div>
+
+    <div class='slidebarRight'>
+      <h4>New homes for sale</h4>
+
+        <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <%= cl_image_tag(@random2[0].image, :class => "d-block w-100 home_image")  %>
+            </div>
+            <div class="carousel-item">
+              <%= cl_image_tag(@random2[1].image, :class => "d-block w-100 home_image")  %>
+            </div>
+            <div class="carousel-item">
+              <%= cl_image_tag(@random2[2].image, :class => "d-block w-100 home_image")  %>
             </div>
           </div>
-          <div class="carousel-item">
-            <%= cl_image_tag(@random1[1].image, :class => "d-block w-100 home_image")  %> 
-            <div class="carousel-caption d-none d-md-block">
-              <h5><%= @random1[1].address %></h5>
-              
-            </div>
-          </div>
-          <div class="carousel-item">
-          <%= cl_image_tag(@random1[2].image, :class => "d-block w-100 home_image")  %>
-            <div class="carousel-caption d-none d-md-block">
-              <h5><%= @random1[2].address %></h5>
-              
-            </div>
-          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+
+    </div>
+
 
   </div>
+    
 <% end %>
 

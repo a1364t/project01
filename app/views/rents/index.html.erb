@@ -5,8 +5,9 @@
 <h4>Search for rent</h4>
 <div class='search'>
     <%= form_tag(rents_search_path, :method => 'get') do %>
-        Min: <%= number_field_tag(:min, params[:min])  %>
-        Max:<%= number_field_tag(:max, params[:max])  %>
+        Min: <%= number_field_tag(:min, params[:min], :class => "form-control search_input", :placeholder => "100.0")  %>
+        Max:<%= number_field_tag(:max, params[:max], :class => "form-control search_input", :placeholder => "100.0")  %>
+        </br>
         <%= submit_tag ("search"), :class => "btn btn-outline-secondary" %>        
     <% end  %>
 </div>
