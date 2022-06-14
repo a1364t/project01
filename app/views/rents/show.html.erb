@@ -29,6 +29,6 @@
 
 <div>
     <%= link_to "Edit property", edit_rent_path(@rent) %>
-    <%= link_to "Delete property", @rent, :method => 'delete', :data => {:confirm => "Are you sure?"} %>
-    <%= link_to 'Back', rents_path %>
+    | <%= link_to "Delete property", @rent, :method => 'delete', :data => {:confirm => "Are you sure?"} %>
+    | <%= link_to 'Back', rents_path %>
 </div>

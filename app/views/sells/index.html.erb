@@ -1,10 +1,11 @@
-<h1> All sells</h1>
+<h1> All Sells</h1>
 <%= link_to "Click here", new_sell_path %> to add a new property for sell
 
 
 
-<h4>Search for sell</h4>
+
 <div class='search'>
+    <h4>Search for Sell</h4>
     <%= form_tag(sells_search_path, :method => 'get') do %>
         Min:<%= number_field_tag(:min, params[:min], :class => "form-control search_input", :placeholder => "1000000")  %>
         Max:<%= number_field_tag(:max, params[:max], :class => "form-control search_input", :placeholder => "1000000")  %>
